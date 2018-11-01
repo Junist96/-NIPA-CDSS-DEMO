@@ -38,67 +38,827 @@
 	
 <script>
 
-var treeData = [
-  {
-    "name": "Non Preganent",
-    "parent": "null",
-    "children":
-      [
-          {
-            "name": "ECOG < 3",
-            "parent": "Non Preganent",
+var treeData = 
+    [
+        {
+            "name": "Patient",
+            "parent": "null",
             "children":
-              [
-                  {
-                    "name": "AGE < 18",
-                    "parent": "ECOG < 3"
-                  },
-                  
-                  {
-                    "name": "18 < AGE < 85",
-                    "parent": "ECOG < 3",
+            [
+                {
+                    "name": "Preganent = True",
+                    "parent": "null"
+                },
+                
+                {
+                    "name": "Preganent = False",
+                    "parent": "null",
                     "children":
-                      [
+                    [
                         {
-                            "name": "cT Stage = cT3-4 or cN Stage = cN1-2",
-                            "parent": "18 < AGE < 85",
+                            "name": "ECOG < 3",
+                            "parent": "Preganent = False",
                             "children":
                             [
                                 {
-                                    "name": "cT Stage = cT1-2N0",
-                                    "parent": "Level 2: A",
+                                    "name": "AGE < 18",
+                                    "parent": "ECOG < 3"
+                                },
+
+                                {
+                                    "name": "18 < AGE < 85",
+                                    "parent": "ECOG < 3",
                                     "children":
                                     [
                                         {
-                                            "name": "cM Stage = cM0",
-                                            "parent": "ECOG < 3",
+                                            "name": "Adenocarcinoma CA = True",
+                                            "parent": "18 < AGE < 85",
                                             "children":
                                             [
-                                                
-                                            ]
-                                        }
+                                                {
+                                                    "name": "OP Possibility = Ture",
+                                                    "parent": "Adenocarcinoma CA",
+                                                    "children":                                    
+                                                    [
+                                                        {
+                                                            "name": "Threshold < Labs",
+                                                            "parent": "OP Possibility = Ture",
+                                                            "children":
+                                                            [
+                                                                {
+                                                                    "name": "Tumor Position = Upper",
+                                                                    "parent": "Threshold < Labs",
+                                                                    "children":
+                                                                    [
+                                                                        {
+                                                                            "name": "Follow Colon CA. Treatment Method",
+                                                                            "parent": "Tumor Position = Upper"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "name": "Tumor Position = Other",
+                                                                    "parent": "Threshold < Labs",
+                                                                    "children":
+                                                                    [
+                                                                        {
+                                                                            "name": "(cT Stage = cT3-4 or cN Stage = cN1-2) = False",
+                                                                            "parent": "Tumor Position = Other",
+                                                                            "children":
+                                                                            [
+                                                                                {
+                                                                                    "name": "cT Stage = cT1-2N0",
+                                                                                    "parent": "(cT Stage = cT3-4 or cN Stage = cN1-2) = False",
+                                                                                    "children":
+                                                                                    [
+                                                                                        {
+                                                                                            "name": "cM Stage = cM0",
+                                                                                            "parent": "cT Stage = cT1-2N0",
+                                                                                            "children":
+                                                                                            [
+                                                                                                {
+                                                                                                    "name": "After R0 Surgery",
+                                                                                                    "parent": "cM Stage = cM1",
+                                                                                                    "children":
+                                                                                                    [
+                                                                                                        {
+                                                                                                            "name": "pTN stage=pT1-2N0",
+                                                                                                            "parent": "After R0 Surgery",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Surveilance Follow up",
+                                                                                                                    "parent": "pTN stage=pT1-2N0",
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "pTN stage=pT3N0",
+                                                                                                            "parent": "After R0 Surgery",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "High Risk = Ture",
+                                                                                                                    "parent": "pTN stage=pT3N0",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "Neuropathy Grade > 1",
+                                                                                                                            "parent": "High Risk = Ture",
+                                                                                                                            "children":
+                                                                                                                            [
+                                                                                                                                {
+                                                                                                                                    "name": "age < 75",
+                                                                                                                                    "parent": "Neuropathy Grade > 1",
+                                                                                                                                    "children":
+                                                                                                                                    [
+                                                                                                                                        {
+                                                                                                                                            "name": "FL/RT then Capecitabiine or FL",
+                                                                                                                                            "parent": "age < 75",
+                                                                                                                                        },
+                                                                                                                                        {
+                                                                                                                                            "name": "Capecitabine/RT then Capecitabine or FL",
+                                                                                                                                            "parent": "age < 75",
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                    "name": "age >= 75",
+                                                                                                                                    "parent": "Neuropathy Grade > 1",
+                                                                                                                                    "children":
+                                                                                                                                    [
+                                                                                                                                        {
+                                                                                                                                            "name": "Capecitabine/RT then Capecitabine or FL",
+                                                                                                                                            "parent": "age >= 75",
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                            
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "pTN stage=pT4N0 or pT1-4N1-2",
+                                                                                                            "parent": "After R0 Surgery",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Neuropathy Grade > 1",
+                                                                                                                    "parent": "pTN stage=pT4N0 or pT1-4N1-2",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "age < 75",
+                                                                                                                            "parent": "Neuropathy Grade > 1",
+                                                                                                                            "children":
+                                                                                                                            [
+                                                                                                                                {
+                                                                                                                                    "name": "FL/RT then Capecitabiine or FL",
+                                                                                                                                    "parent": "age < 75",
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                    "name": "Capecitabine/RT then Capecitabine or FL",
+                                                                                                                                    "parent": "age < 75",
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "name": "age >= 75",
+                                                                                                                            "parent": "Neuropathy Grade > 1",
+                                                                                                                            "children":
+                                                                                                                            [
+                                                                                                                                {
+                                                                                                                                    "name": "Capecitabine/RT then Capecitabine or FL",
+                                                                                                                                    "parent": "age >= 75",
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
 
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "Neuropathy Grade <= 1",
+                                                                                                                    "parent": "pTN stage=pT4N0 or pT1-4N1-2",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "age < 75",
+                                                                                                                            "parent": "Neuropathy Grade <= 1",
+                                                                                                                            "children":
+                                                                                                                            [
+                                                                                                                                {
+                                                                                                                                    "name": "FL/RT then Capecitabiine or FL",
+                                                                                                                                    "parent": "age < 75",
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                    "name": "Capecitabine/RT then Capecitabine or FL",
+                                                                                                                                    "parent": "age < 75",
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "name": "age >= 75",
+                                                                                                                            "parent": "Neuropathy Grade <= 1",
+                                                                                                                            "children":
+                                                                                                                            [
+                                                                                                                                {
+                                                                                                                                    "name": "FOLFOX then Capeitabine/RT",
+                                                                                                                                    "parent": "age >= 75",
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "pTN stage= Other",
+                                                                                                            "parent": "After R0 Surgery",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Undefined",
+                                                                                                                    "parent": "pTN stage= Other"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "cM Stage = cM1",
+                                                                                            "parent": "cT Stage = cT1-2N0",
+                                                                                            "children":
+                                                                                            [
+                                                                                                {
+                                                                                                    "name": "Undefined",
+                                                                                                    "parent": "cM Stage = cM1"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "(cT Stage = cT3-4 or cN Stage = cN1-2) = True",
+                                                                            "parent": "Tumor Position = Other",
+                                                                            "children":
+                                                                            [
+                                                                                {
+                                                                                    "name": "cM Stage = cM0",
+                                                                                    "parent": "cT Stage = cT3-4 or cN Stage = cN1-2",
+                                                                                    "children":
+                                                                                    [
+                                                                                        {
+                                                                                            "name": "After CCRT then, Surgery",
+                                                                                            "parent": "cM Stage = cM0",
+                                                                                            "children":
+                                                                                            [
+                                                                                                {
+                                                                                                    "name": "ypTN Stage = CR",
+                                                                                                    "parent": "After CCRT then, Surgery",
+                                                                                                    "children":
+                                                                                                    [
+                                                                                                        {
+                                                                                                            "name": "Surveilance or FL",
+                                                                                                            "parent": "ypTN Stage = CR"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "ypTN Stage = ypT1-2N0",
+                                                                                                    "parent": "After CCRT then, Surgery",
+                                                                                                    "children":
+                                                                                                    [
+                                                                                                        {
+                                                                                                            "name": "FL",
+                                                                                                            "parent": "ypTN Stage = ypT1-2N0"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "ypTN Stage = ypT3N0",
+                                                                                                    "parent": "After CCRT then, Surgery",
+                                                                                                    "children":
+                                                                                                    [
+                                                                                                        {
+                                                                                                            "name": "High Risk = True",
+                                                                                                            "parent": "ypTN Stage = ypT1-2N0",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Neuropathy Grade > 1",
+                                                                                                                    "parent": "High Risk = True",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "Age < 75",
+                                                                                                                            "parent": "Neuropathy Grade > 1",
+                                                                                                                            "children":
+                                                                                                                            [
+                                                                                                                                {
+                                                                                                                                    "name": "Capecitabine",
+                                                                                                                                    "parent": "Age < 75"
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "name": "Age >= 75",
+                                                                                                                            "parent": "Neuropathy Grade > 1",
+                                                                                                                            "children":
+                                                                                                                            [
+                                                                                                                                {
+                                                                                                                                    "name": "FL",
+                                                                                                                                    "parent": "Age >= 75"
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "Neuropathy Grade <= 1",
+                                                                                                                    "parent": "High Risk = True",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "Age < 75",
+                                                                                                                            "parent": "",
+                                                                                                                            "children":
+                                                                                                                            [
+                                                                                                                                {
+                                                                                                                                    "name": "FOLFOX or Capecitabine",
+                                                                                                                                    "parent": "Age < 75"
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "name": "Age >= 75",
+                                                                                                                            "parent": "Neuropathy Grade <= 1",
+                                                                                                                            "children":
+                                                                                                                            [
+                                                                                                                                {
+                                                                                                                                    "name": "FL or Capecitabine",
+                                                                                                                                    "parent": "Age >= 75"
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "High Risk = False",
+                                                                                                            "parent": "ypTN Stage = ypT1-2N0",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "FL",
+                                                                                                                    "parent": "High Risk = False"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "ypTN Stage = ypT4N0 or ypT1-4N1-2",
+                                                                                                    "parent": "After CCRT then, Surgery",
+                                                                                                    "children":
+                                                                                                    [
+                                                                                                        {
+                                                                                                            "name": "Neuropathy Grade > 1",
+                                                                                                            "parent": "High Risk = True",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Age < 75",
+                                                                                                                    "parent": "Neuropathy Grade > 1",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "Capecitabine",
+                                                                                                                            "parent": "Age < 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "Age >= 75",
+                                                                                                                    "parent": "Neuropathy Grade > 1",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "FL",
+                                                                                                                            "parent": "Age >= 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "Neuropathy Grade <= 1",
+                                                                                                            "parent": "High Risk = True",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Age < 75",
+                                                                                                                    "parent": "",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "FOLFOX or Capecitabine",
+                                                                                                                            "parent": "Age < 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "Age >= 75",
+                                                                                                                    "parent": "Neuropathy Grade <= 1",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "FL or Capecitabine",
+                                                                                                                            "parent": "Age >= 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "ypTN Stage = Other",
+                                                                                                    "parent": "After CCRT then, Surgery",
+                                                                                                    "children":
+                                                                                                    [
+                                                                                                        {
+                                                                                                            "name": "Undefined",
+                                                                                                            "parent": "ypTN Stage = Other"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "After CCRT than Surgery Contraindicated",
+                                                                                            "parent": "cM Stage = cM0",
+                                                                                            "children":
+                                                                                            [
+                                                                                                {
+                                                                                                    "name": "K-ras = Positive and eGEF = Positive",
+                                                                                                    "parent": "After CCRT than Surgery Contraindicated",
+                                                                                                    "children":
+                                                                                                    [
+                                                                                                        {
+                                                                                                            "name": "Neuropathy Grade > 1",
+                                                                                                            "parent": "K-ras = Positive and eGEF = Positive",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Cetuximab + FOLFIRI",
+                                                                                                                    "Parent": "Neuropathy Grade > 1"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "Neuropathy Grade <= 1",
+                                                                                                            "parent": "K-ras = Positive and eGEF = Positive",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Age < 75",
+                                                                                                                    "parent": "Neuropathy Grade <= 1",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "Cetuximab + FOLFOX",
+                                                                                                                            "parent": "Age > 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "Age >= 75",
+                                                                                                                    "parent": "Neuropathy Grade <= 1",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "Cetuximab + FOLFIRI",
+                                                                                                                            "parent": "Age >= 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "H/T > 160/100",
+                                                                                                    "parent": "After CCRT than Surgery Contraindicated",
+                                                                                                    "children":
+                                                                                                    [
+                                                                                                        {
+                                                                                                            "name": "Neuropathy Grade > 1",
+                                                                                                            "parent": "H/T > 160/100",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "FOLFIRI",
+                                                                                                                    "parent": "Neuropathy Grade > 1"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "Neuropathy Grade <= 1",
+                                                                                                            "parent": "H/T > 160/100",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Age < 75",
+                                                                                                                    "parent": "Neuropathy Grade <= 1",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "FOLFOX",
+                                                                                                                            "parnet": "Age < 75",
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "Age >= 75",
+                                                                                                                    "parent": "Neuropathy Grade <= 1",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "FOLFIRI",
+                                                                                                                            "parent": "Age >= 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "H/T <= 160/100",
+                                                                                                    "parent": "After CCRT than Surgery Contraindicated",
+                                                                                                    "children":
+                                                                                                    [
+                                                                                                        {
+                                                                                                            "name": "Neuropathy Grade > 1",
+                                                                                                            "parent": "H/T > 160/100",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Bevacizumab + FOLFIRI",
+                                                                                                                    "parent": "Neuropathy Grade > 1"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "Neuropathy Grade <= 1",
+                                                                                                            "parent": "H/T > 160/100",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Age < 75",
+                                                                                                                    "parent": "Neuropathy Grade <= 1",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "Bevacizumab + FOLFOX",
+                                                                                                                            "parnet": "Age < 75",
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "Age >= 75",
+                                                                                                                    "parent": "Neuropathy Grade <= 1",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "Bevacizumab + FOLFIRI",
+                                                                                                                            "parent": "Age >= 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "Surgery First",
+                                                                                            "parent": "cM Stage = cM0",
+                                                                                            "children":
+                                                                                            [
+                                                                                                {
+                                                                                                    "name": "pTN Stage = pT1-2N0",
+                                                                                                    "parent": "Surgery First",
+                                                                                                    "children":
+                                                                                                    [
+                                                                                                        {
+                                                                                                            "name": "Surveilance",
+                                                                                                            "parent": "pTN Stage = pT1-2N0"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "pTN Stage = pT3N0",
+                                                                                                    "parent": "Surgery First",
+                                                                                                    "children":
+                                                                                                    [
+                                                                                                        {
+                                                                                                            "name": "High Risk = Ture",
+                                                                                                            "parent": "pTN Stage = pT3N0",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Neuropathy Grade > 1",
+                                                                                                                    "parent": "High Risk",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "Capecitabine/RT then Capecitabine or FL",
+                                                                                                                            "parent": "Neuropathy Grade > 1"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "Neuropathy Grade <= 1",
+                                                                                                                    "parent": "High Risk = Ture",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "Age < 75",
+                                                                                                                            "parent": "Neuropathy Grade <= 1",
+                                                                                                                            "children":
+                                                                                                                            [
+                                                                                                                                {
+                                                                                                                                    "name": "FOLFOX then Capecitabine/RT",
+                                                                                                                                    "parent": "Age < 75"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                    "name": "Capecitabine/RT then Capecitabine or FL",
+                                                                                                                                    "parent": "Age < 75"
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "name": "Age >= 75",
+                                                                                                                            "parent": "Neuropathy Grade <= 1",
+                                                                                                                            "children":
+                                                                                                                            [
+                                                                                                                                {
+                                                                                                                                    "name": "FL/RT then Capecitabine or FL",
+                                                                                                                                    "parent": "Age >= 75"
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "High Risk = False",
+                                                                                                            "parent": "pTN Stage = pT3N0",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Age < 75",
+                                                                                                                    "parent": "High Risk = False",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "Capecitabine/RT then Capecitabine or FL",
+                                                                                                                            "parent": "Age < 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "Age >= 75",
+                                                                                                                    "parent": "High Risk = False",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "FL/RT then Capecitabine or FL",
+                                                                                                                            "parent": "Age >= 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "pTN Stage = pT4N0 or pTN Stage = pT1-4N1-2",
+                                                                                                    "parent": "Surgery First",
+                                                                                                    "children":
+                                                                                                    [
+                                                                                                        {
+                                                                                                            "name": "Neuropathy Grade > 1",
+                                                                                                            "parent": "pTN Stage = pT4N0 or pTN Stage = pT1-4N1-2",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Age < 75",
+                                                                                                                    "parent": "Neuropathy Grade > 1",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "Capecitabine/RT then Capecitabine or FL",
+                                                                                                                            "parent": "Age < 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "Age >= 75",
+                                                                                                                    "parent": "Neuropathy Grade <= 1",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "FL/RT then Capecitabine or FL",
+                                                                                                                            "parent": "Age >= 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "Neuropathy Grade <= 1",
+                                                                                                            "parent": "pTN Stage = pT4N0 or pTN Stage = pT1-4N1-2",
+                                                                                                            "children":
+                                                                                                            [
+                                                                                                                {
+                                                                                                                    "name": "Age < 75",
+                                                                                                                    "parent": "Neuropathy Grade <= 1",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "Capecitabin/RT then Capecitabin or FL]",
+                                                                                                                            "parent": "Age < 75"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "name": "FOLFOX then Capecitabine / RT",
+                                                                                                                            "parent": "Age < 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "Age >= 75",
+                                                                                                                    "parent": "Neuropathy Grade <= 1",
+                                                                                                                    "children":
+                                                                                                                    [
+                                                                                                                        {
+                                                                                                                            "name": "FL/RT then Capecitabine or FL",
+                                                                                                                            "parent": "Age >= 75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                            ]
+                                                                                        }
+
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "name": "cM Stage = cM1",
+                                                                                    "parent": "cM Stage = cM0",
+                                                                                    "children":
+                                                                                    [
+                                                                                        {
+                                                                                            "name": "Undefined",
+                                                                                            "parent": "cM Stage = cM1"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "Threshold >= Labs",
+                                                            "parent": "OP Possibility = Ture",
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "OP Possibility = False",
+                                                    "parent": "Adenocarcinoma CA"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Adenocarcinoma CA = False",
+                                            "parent": "18 < AGE < 85",
+                                        }
                                     ]
+                                },
+
+                                {
+                                    "name": "AGE > 85",
+                                    "parent": "ECOG < 3"
                                 }
                             ]
                         },
-                      ]
-                  },
-                  
-                  {
-                    "name": "AGE > 85",
-                    "parent": "ECOG < 3"
-                  }
+
+                        {
+                            "name": "ECOG >= 3",
+                            "parent": "Non Preganent"
+                        }
+                    ]
+                }
             ]
-          },
-          
-          {
-            "name": "ECOG = 4",
-            "parent": "Non Preganent"
-          }
-    ]
-  }
-];
+        }
+    ];
 
 
 // ************** Generate the tree diagram	 *****************
