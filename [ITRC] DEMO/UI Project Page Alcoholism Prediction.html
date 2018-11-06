@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style">
+
+<head>
+  <title> 뇌질환 분석 플랫폼 </title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <!-- Icon fonts -->
+  <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/open-iconic.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/pe-icon-7-stroke.css">
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/uikit.css">
+  <link rel="stylesheet" href="assets/css/demo.css">
+
+  <script src="assets/vendor/js/material-ripple.js"></script>
+  <script src="assets/vendor/js/layout-helpers.js"></script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/js/pace.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
+  <link rel="stylesheet" href="assets/vendor/libs/dropzone/dropzone.css">
+  <link rel="stylesheet" href="assets/vendor/libs/flow-js/flow.css">
+</head>
+
+<body>
+  <div class="page-loader">
+    <div class="bg-primary"></div>
+  </div>
+
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-2">
+    <!-- Layout sidenav -->
+      <div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-dark">
+
+        <!-- Brand demo (see assets/css/demo/demo.css) -->
+        <div class="app-brand demo">
+          <a href="index.html" class="app-brand-text demo sidenav-text font-weight-normal ml-2">Analysis Application </a>
+          <a href="javascript:void(0)" class="layout-sidenav-toggle sidenav-link text-large ml-auto">
+            <i class="ion ion-md-menu align-middle"></i>
+          </a>
+        </div>
+
+        <div class="sidenav-divider mt-0"></div>
+
+        <!-- Links -->
+        <ul class="sidenav-inner py-1">
+
+          <!-- Dashboards -->
+          <li class="sidenav-item open active">
+            <a href="javascript:void(0)" class="sidenav-link sidenav-toggle">
+              <i class="sidenav-icon ion ion-md-speedometer"></i>
+              <div>Process</div>
+            </a>
+
+            <ul class="sidenav-menu">
+              <li class="sidenav-item">
+                <a href="UI%20Project%20Page.html" class="sidenav-link">
+                  <div>Project Page</div>
+                </a>
+              </li>
+              <li class="sidenav-item">
+                <a href="UI%20File%20Upload.html" class="sidenav-link">
+                  <div>File Upload</div>
+                </a>
+              </li>
+              <li class="sidenav-item">
+                <a href="UI%20Analytics.html" class="sidenav-link">
+                  <div>Analytics</div>
+                </a>
+              </li>
+              <li class="sidenav-item active">
+                <a href="UI%20Result.html" class="sidenav-link">
+                  <div>Result</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidenav-divider mb-1"></li>
+        </ul>
+      </div>
+      <!-- / Layout sidenav -->
+
+    <div class="layout-inner">
+      <!-- Layout container -->
+      <div class="layout-container">
+        <!-- Layout content -->
+        <div class="layout-content">
+          <!-- Content -->
+          <div class="container-fluid flex-grow-1 container-p-y">
+
+            <h4 class="py-3 mb-4">
+              <ol class="breadcrumb font-weight-bold m-0">
+                <li class="breadcrumb-item">
+                  <a href="javascript:void(0)">Project</a>
+                </li>
+                <li class="breadcrumb-item active">Alcoholism Prediction
+                </li>
+              </ol>
+            </h4>
+
+            <!-- Header -->
+            <div class="border-right-0 border-left-0 ui-bordered container-m--x mb-4">
+              <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-9">
+                  <div class="media-body container-p-x py-4">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <div>
+                        <strong class="text-primary text-large">97.9%</strong> Accuracy</div>
+                    </div>
+                    <div class="progress" style="height: 4px;">
+                      <div class="progress-bar" style="width: 97.9%;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="container-p-x py-4">
+                    <div class="text-muted small">Status</div>
+                    <strong class="text-success text-big">Active</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- / Header -->
+
+            <div class="row">
+              <div class="col">
+
+                <!-- Description -->
+                <div class="card mb-4">
+                  <h6 class="card-header">Description</h6>
+                  <div class="card-body">
+                    <p>Multiple electrode time series EEG recordings of control and alcoholic subjects.</p>
+                    <p>This data arises from a large study to examine EEG correlates of genetic predisposition to alcoholism. It contains measurements from 64 electrodes placed on the scalp sampled at 256 Hz (3.9-msec epoch) for 1 second.</p>
+                    <p>This data arises from a large study to examine EEG correlates of genetic predisposition to alcoholism. It contains measurements from 64 electrodes placed on subject's scalps which were sampled at 256 Hz (3.9-msec epoch) for 1 second.</p>
+                    <p>There were two groups of subjects: alcoholic and control. Each subject was exposed to either a single stimulus (S1) or to two stimuli (S1 and S2) which were pictures of objects chosen from the 1980 Snodgrass and Vanderwart picture set. When two stimuli were shown, they were presented in either a matched condition where S1 was identical to S2 or in a non-matched condition where S1 differed from S2.</p>
+                    <p>Shown here are example plots of a control and alcoholic subject. The plots indicate voltage, time, and channel and are averaged over 10 trials for the single stimulus condition.</p>
+                    <p>There were 122 subjects and each subject completed 120 trials where different stimuli were shown. The electrode positions were located at standard sites (Standard Electrode Position Nomenclature, American Electroencephalographic Association 1990). Zhang et al. (1995) describes in detail the data collection process.</p>
+                  </div>
+                </div>
+                <!-- / Description -->
+
+                <div class="card mb-4">
+                  <h6 class="card-header">
+                    Data Upload
+                  </h6>
+                  <div class="card-body">
+                    <form action="/upload" class="dropzone needsclick" id="dropzone-demo">
+                      <div class="dz-message needsclick">
+                        분석하고자 하는 데이터 파일을 이곳에 드랍하거나 클릭하여 업로드 해주세요.
+                      </div>
+                      <div class="fallback">
+                        <input name="file" type="file" multiple>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                  
+                <div class="card-footer py-3">
+                    <button type="button" class="btn btn-primary" onclick="location.href='UI%20Result.html'">
+                      <i class="ion ion-md-add"></i>&nbsp; Classify Data</button>&nbsp;
+                    <button type="button" class="btn btn-default md-btn-flat" onclick="location.href='UI%20Project%20Page.html'">
+                      <i class="ion ion-md-close"></i>&nbsp; Return</button>
+                </div>
+              </div>
+                
+              <div class="col-md-4 col-xl-3">
+
+                <!-- Project details -->
+                <div class="card mb-4">
+                  <h6 class="card-header">Project details</h6>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Model</div>
+                      <div>
+                        <strong>Artificial Neural Network</strong>
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Accuracy</div>
+                      <div>
+                        <div>97.9%</div>
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Prevalence</div>
+                      <div>
+                        <div>76.5%</div>
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Sensitivity</div>
+                      <div>92.1%</div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Specificty</div>
+                      <div>97.8%</div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">PPV</div>
+                      <div>95.9%</div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">NPV</div>
+                      <div>92.1%</div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Created</div>
+                      <div>
+                        <div>09/01/2018</div>
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Attribute</div>
+                      <div>
+                        <div>84</div>
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Total Data</div>
+                      <div>
+                        <div>41,350</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- / Project details -->
+
+                <!-- Uploaded files -->
+                <div class="card mb-4">
+                  <h6 class="card-header">Uploaded files</h6>
+                  <div class="card-body p-3">
+                    <div class="row no-gutters">
+                      <div class="col-md-6 col-lg-12 col-xl-6 p-1">
+                        <div class="project-attachment ui-bordered p-2">
+                          <div class="media-body ml-3">
+                            <strong class="project-attachment-filename">dataset.csv</strong>
+                            <div class="text-muted small">106.3MB</div>
+                            <div>
+                              <a href="javascript:void(0)">View</a> &nbsp;
+                              <a href="javascript:void(0)">Download</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-12 col-xl-6 p-1">
+                        <div class="project-attachment ui-bordered p-2">
+                          <div class="media-body ml-3">
+                            <strong class="project-attachment-filename">dataset_label.csv</strong>
+                            <div class="text-muted small">41.3MB</div>
+                            <div>
+                              <a href="javascript:void(0)">View</a> &nbsp;
+                              <a href="javascript:void(0)">Download</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- / Uploaded files -->
+
+              </div>
+            </div>
+
+          </div>
+          <!-- / Content -->
+        </div>
+        <!-- Layout content -->
+      </div>
+      <!-- / Layout container -->
+    
+    </div>
+  <!-- / Layout wrapper -->
+  </div>
+  <!-- Core scripts -->
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+  <script src="assets/vendor/js/sidenav.js"></script>
+
+  <!-- Libs -->
+  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="assets/vendor/libs/dropzone/dropzone.js"></script>
+  <script src="assets/vendor/libs/flow-js/flow.js"></script>
+
+  <!-- Demo -->
+  <script src="assets/js/demo.js"></script>
+  <script src="assets/js/forms_file-upload.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style">
+
+<head>
+  <title> 뇌질환 분석 플랫폼 </title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <!-- Icon fonts -->
+  <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/open-iconic.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/pe-icon-7-stroke.css">
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/uikit.css">
+  <link rel="stylesheet" href="assets/css/demo.css">
+
+  <script src="assets/vendor/js/material-ripple.js"></script>
+  <script src="assets/vendor/js/layout-helpers.js"></script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/js/pace.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
+  <link rel="stylesheet" href="assets/vendor/libs/dropzone/dropzone.css">
+  <link rel="stylesheet" href="assets/vendor/libs/flow-js/flow.css">
+</head>
+
+<body>
+  <div class="page-loader">
+    <div class="bg-primary"></div>
+  </div>
+
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-2">
+    <!-- Layout sidenav -->
+      <div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-dark">
+
+        <!-- Brand demo (see assets/css/demo/demo.css) -->
+        <div class="app-brand demo">
+          <a href="index.html" class="app-brand-text demo sidenav-text font-weight-normal ml-2">Analysis Application </a>
+          <a href="javascript:void(0)" class="layout-sidenav-toggle sidenav-link text-large ml-auto">
+            <i class="ion ion-md-menu align-middle"></i>
+          </a>
+        </div>
+
+        <div class="sidenav-divider mt-0"></div>
+
+        <!-- Links -->
+        <ul class="sidenav-inner py-1">
+
+          <!-- Dashboards -->
+          <li class="sidenav-item open active">
+            <a href="javascript:void(0)" class="sidenav-link sidenav-toggle">
+              <i class="sidenav-icon ion ion-md-speedometer"></i>
+              <div>Process</div>
+            </a>
+
+            <ul class="sidenav-menu">
+              <li class="sidenav-item">
+                <a href="UI%20Project%20Page.html" class="sidenav-link">
+                  <div>Project Page</div>
+                </a>
+              </li>
+              <li class="sidenav-item">
+                <a href="UI%20File%20Upload.html" class="sidenav-link">
+                  <div>File Upload</div>
+                </a>
+              </li>
+              <li class="sidenav-item">
+                <a href="UI%20Analytics.html" class="sidenav-link">
+                  <div>Analytics</div>
+                </a>
+              </li>
+              <li class="sidenav-item active">
+                <a href="UI%20Result.html" class="sidenav-link">
+                  <div>Result</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidenav-divider mb-1"></li>
+        </ul>
+      </div>
+      <!-- / Layout sidenav -->
+
+    <div class="layout-inner">
+      <!-- Layout container -->
+      <div class="layout-container">
+        <!-- Layout content -->
+        <div class="layout-content">
+          <!-- Content -->
+          <div class="container-fluid flex-grow-1 container-p-y">
+
+            <h4 class="py-3 mb-4">
+              <ol class="breadcrumb font-weight-bold m-0">
+                <li class="breadcrumb-item">
+                  <a href="javascript:void(0)">Project</a>
+                </li>
+                <li class="breadcrumb-item active">Epilepsy Prediction
+                </li>
+              </ol>
+            </h4>
+
+            <!-- Header -->
+            <div class="border-right-0 border-left-0 ui-bordered container-m--x mb-4">
+              <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-9">
+                  <div class="media-body container-p-x py-4">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <div>
+                        <strong class="text-primary text-large">92%</strong> Accuracy</div>
+                    </div>
+                    <div class="progress" style="height: 4px;">
+                      <div class="progress-bar" style="width: 92%;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="container-p-x py-4">
+                    <div class="text-muted small">Status</div>
+                    <strong class="text-success text-big">Active</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- / Header -->
+
+            <div class="row">
+              <div class="col">
+
+                <!-- Description -->
+                <div class="card mb-4">
+                  <h6 class="card-header">Description</h6>
+                  <div class="card-body">
+                    <p>University Hospital klinikum Bonn에서 제공하는 뇌파 데이터는 500명의 피험자를 대상으로 128채널의 앰프 시스템을 이용해 23초 가량 뇌파 데이터를 측정하고 기록하였다. 기록 된 뇌파 데이터는 아날로그 타입이였으나, 오픈데이터로 공개하기 위해 12 비트의 디지털 데이터로 변환 과정을 거친 뒤 배포 되었다.</p>
+                    <p>500명의 뇌파 데이터는 피험자의 상태에 따라 A, B, C, D, E로 총 5개의 분류로 나누었으며, 각각의 분류 폴더에는 100명의 피험자로부터 23초 동안 기록한 뇌파 데이터를 구분하여 배포하였다. 피험자의 상태를 분류하는 기준은 다음과 같다. A와 B 분류는 건강한 피험자로부터 측정한 뇌파이며, A는 눈을 뜬 상태로 측정한 뇌파이며, B는 눈을 감은 상태로 측정한 뇌파이다. C와 D는 뇌에 종양이 발견된 피험자로부터 측정한 뇌파이며, C는 종양이 위치하지 않은 영역에서 측정한 뇌파이며, D는 종양이 위치한 영역에서 측정한 뇌파이다. E는 간질에 의해 발작을 일으키는 뇌파를 측정한 뇌파이다.</p>
+                    <p>데이터 셋은 로체스터 공과대학(RIT; Rochester Institute of Technology)에서 원본 데이터를 전처리 및 재구성하여 제공하는 데이터 셋이다. 데이터 셋에는 다양한 부위에서 측정한 뇌파 데이터 값을  X1에서 X178까지의 속성에 저장하였으며, 데이터의 레이블로 피험자의 상태를 나타내는 값을 y 속성에 저장하였다. 각각의 속성에는 500명의 피험자가 23초 동안 측정한 11,500개의 데이터가 저장되어 있으며, 총 2,058,500개의 데이터 포인트 구성되어 있다.</p>
+                  </div>
+                </div>
+                <!-- / Description -->
+
+                <div class="card mb-4">
+                  <h6 class="card-header">
+                    Data Upload
+                  </h6>
+                  <div class="card-body">
+                    <form action="/upload" class="dropzone needsclick" id="dropzone-demo">
+                      <div class="dz-message needsclick">
+                        분석하고자 하는 데이터 파일을 이곳에 드랍하거나 클릭하여 업로드 해주세요.
+                      </div>
+                      <div class="fallback">
+                        <input name="file" type="file" multiple>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                  
+                <div class="card-footer py-3">
+                    <button type="button" class="btn btn-primary" onclick="location.href='UI%20Result.html'">
+                      <i class="ion ion-md-add"></i>&nbsp; Classify Data</button>&nbsp;
+                    <button type="button" class="btn btn-default md-btn-flat" onclick="location.href='UI%20Project%20Page.html'">
+                      <i class="ion ion-md-close"></i>&nbsp; Return</button>
+                </div>
+              </div>
+                
+              <div class="col-md-4 col-xl-3">
+
+                <!-- Project details -->
+                <div class="card mb-4">
+                  <h6 class="card-header">Project details</h6>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Model</div>
+                      <div>
+                        <strong>Support Vector Machine</strong>
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Accuracy</div>
+                      <div>
+                        <div>92%</div>
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Prevalence</div>
+                      <div>
+                        <div>47.5%</div>
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Sensitivity</div>
+                      <div>90.2%</div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Specificty</div>
+                      <div>94.3%</div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">PPV</div>
+                      <div>94.7%</div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">NPV</div>
+                      <div>93.6%</div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Created</div>
+                      <div>
+                        <div>10/08/2018</div>
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Attribute</div>
+                      <div>
+                        <div>178</div>
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="text-muted">Total Data</div>
+                      <div>
+                        <div>11,500</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- / Project details -->
+
+                <!-- Uploaded files -->
+                <div class="card mb-4">
+                  <h6 class="card-header">Uploaded files</h6>
+                  <div class="card-body p-3">
+                    <div class="row no-gutters">
+                      <div class="col-md-6 col-lg-12 col-xl-6 p-1">
+                        <div class="project-attachment ui-bordered p-2">
+                          <div class="media-body ml-3">
+                            <strong class="project-attachment-filename">dataset.csv</strong>
+                            <div class="text-muted small">38.7MB</div>
+                            <div>
+                              <a href="javascript:void(0)">View</a> &nbsp;
+                              <a href="javascript:void(0)">Download</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-12 col-xl-6 p-1">
+                        <div class="project-attachment ui-bordered p-2">
+                          <div class="media-body ml-3">
+                            <strong class="project-attachment-filename">dataset_label.csv</strong>
+                            <div class="text-muted small">11.7MB</div>
+                            <div>
+                              <a href="javascript:void(0)">View</a> &nbsp;
+                              <a href="javascript:void(0)">Download</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- / Uploaded files -->
+
+              </div>
+            </div>
+
+          </div>
+          <!-- / Content -->
+        </div>
+        <!-- Layout content -->
+      </div>
+      <!-- / Layout container -->
+    
+    </div>
+  <!-- / Layout wrapper -->
+  </div>
+  <!-- Core scripts -->
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+  <script src="assets/vendor/js/sidenav.js"></script>
+
+  <!-- Libs -->
+  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="assets/vendor/libs/dropzone/dropzone.js"></script>
+  <script src="assets/vendor/libs/flow-js/flow.js"></script>
+
+  <!-- Demo -->
+  <script src="assets/js/demo.js"></script>
+  <script src="assets/js/forms_file-upload.js"></script>
+</body>
+
+</html>
